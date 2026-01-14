@@ -1,0 +1,26 @@
+{
+  "name": "go-dracula",
+  "displayName": "Go Dracula",
+  "description": "",
+  "version": "1.0.0",
+  "publisher": "vladimirkorzhenevskiy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladimirkorzhenevskiy/go-dracula.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Go Dracula",
+        "uiTheme": "vs-dark",
+        "path": "./themes/go-dracula-color-theme.json"
+      }
+    ]
+  }
+}

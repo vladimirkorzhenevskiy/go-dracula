@@ -1,18 +1,31 @@
 {
 	"name": "Go Dracula",
 	"colors": {
+		"editor.background": "#2B2B2B", // Цвет фона
+		"editor.foreground": "#A9B7C6", // Цвет текста
+
+		"editor.selectionBackground": "#214283", // Цвет фона выделения
+		"editor.selectionForeground": "#ffffff", // Цвет текста выделения
+
+		"editor.selectionHighlightBackground": "#45494a90", // Цвет фона для всех вхождений выделения
+		"editor.selectionHighlightBorder": "#595959", // Цвет рамки для всех вхождений выделения
+
+		"editor.lineHighlightBackground": "#323232", // Цвет фона текущей строки
+		"editor.inactiveSelectionBackground": "#3a3d4150", // Цвет выделения текста при смене фокуса
+
+		"editor.wordHighlightBackground": "#34413480",
+		"editor.wordHighlightBorder": "#4c5052",
+		"editor.wordHighlightStrongBackground": "#34413480",
+		"editor.wordHighlightStrongBorder": "#4c5052",
+
 		"activityBar.background": "#3c3f41",
 		"activityBar.border": "#323232",
 		"activityBar.foreground": "#f0f0f0",
+
 		"breadcrumb.background": "#313335",
 		"dropdown.border": "#323232",
 		"dropdown.foreground": "#bbbbbb",
 		"dropdown.listBackground": "#646464",
-		"editor.background": "#2b2b2b",
-		"editor.foreground": "#A9B7C6",
-		"editor.inactiveSelectionBackground": "#3a3d4150",
-		"editor.lineHighlightBackground": "#323232",
-		"editor.selectionBackground": "#264f78",
 		"editorCodeLens.foreground": "#635656",
 		"editorGroup.border": "#323232",
 		"editorGroupHeader.tabsBackground": "#3c3f41",
@@ -28,9 +41,11 @@
 		"editorWidget.border": "#323232",
 		"focusBorder": "#FFFFFF00",
 		"gitDecoration.ignoredResourceForeground": "#6d6d6d",
+
 		"input.background": "#45494a",
 		"input.border": "#323232",
 		"input.foreground": "#bbbbbb",
+
 		"list.activeSelectionBackground": "#4b6eaf",
 		"list.dropBackground": "#474b4d",
 		"list.focusBackground": "#4b6eaf",
@@ -76,9 +91,32 @@
 		"notebook.focusedCellBorder": "#4787C9",
 		"notebook.cellHoverBackground": "#313335",
 		"notebook.focusedEditorBorder": "#505050",
-		"editorOverviewRuler.border": "#46464621"
+		"editorOverviewRuler.border": "#46464621",
+
+		// Настройка окна предварительного просмотра
+		// 1. Общая рамка и заголовок
+		"peekView.border": "#595959", // Серая рамка как в IDE
+		"peekViewTitle.background": "#3b3e40", // Темный заголовок
+		"peekViewTitleLabel.foreground": "#bbbbbb", // Текст заголовка
+		"peekViewTitleDescription.foreground": "#999999", // Описание (путь к файлу)
+		
+		// 2. Левая часть (Редактор кода в окне)
+		"peekViewEditor.background": "#2b2b2b", // Такой же фон, как у основного редактора
+		"peekViewEditor.matchHighlightBackground": "#3e4143", // Подсветка найденного слова
+		"peekViewEditor.matchHighlightBorder": "#595959",
+
+		// 3. Правая часть (Список файлов)
+		"peekViewResult.background": "#3b3e40", // Фон списка файлов справа
+		"peekViewResult.fileForeground": "#bbbbbb", // Цвет имени файла
+		"peekViewResult.lineForeground": "#999999", // Цвет номера строки
+		"peekViewResult.selectionBackground": "#214283", // Синее выделение выбранного файла
+		"peekViewResult.selectionForeground": "#ffffff", // Белый текст в выделении
+		
+		// 4. Подсветка вхождения (когда нашел то, что искал)
+		"peekViewResult.matchHighlightBackground": "#4d4d4d"
 	},
 	"tokenColors": [
+		// START LEGACY
 		{
 			"name": "Comment",
 			"scope": [
@@ -899,39 +937,181 @@
 				"foreground": "#528CC7"
 			}
 		},
+		// END
+
+		// Общие
+		// Комментарии
 		{
-			"name": "Go - Package Declaration",
+			"name": "Comments",
 			"scope": [
-				"entity.name.package.go"
+				"comment"
+			],
+			"settings": {
+				"foreground": "#808080",
+				"fontStyle": "italic"
+			}
+		},
+		// Ключевые слова
+		{
+			"name": "Keywords",
+			"scope": [
+				"keyword",
+				"keyword.operator.new",
+				"keyword.operator.expression",
+				"storage",
+				"constant.language.undefined",
+				"variable.language.this"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		// Операторы
+		{
+			"name": "Operators",
+			"scope": [
+				"keyword.operator"
 			],
 			"settings": {
 				"foreground": "#A9B7C6"
 			}
 		},
+		// Типы
 		{
-			"name": "Go - Package/Module Names",
+			"name": "Types",
 			"scope": [
-				"entity.name.namespace.go",
-				"support.other.module.go"
+				"entity.name.type",
 			],
 			"settings": {
-				"foreground": "#BACC7C"
+				"foreground": "#A9B7C6"
 			}
 		},
+		// Переменные
 		{
-			"name": "Go - Type Names",
+			"name": "Variable",
+			"scope": [
+				"variable",
+				"variable.other.readwrite",
+				"variable.other.object",
+				"variable.other.property"
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		// Функции
+		{
+			"name": "Functions",
+			"scope": [
+				"entity.name.function",
+			],
+			"settings": {
+				"foreground": "#FFC660"
+			}
+		},
+		// Строки
+		{
+			"name": "Strings",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		// Числа
+		{
+			"name": "Numbers",
+			"scope": [
+				"constant.numeric",
+			],
+			"settings": {
+				"foreground": "#6897BB"
+			}
+		},
+
+		// Go
+		// Ключевые слова
+		{
+			"name": "Go - Keywords",
+			"scope": [
+				"keyword.package.go",
+				"keyword.control.go",
+				"keyword.control.import.go",
+				"keyword.var.go",
+				"keyword.const.go",
+				"keyword.type.go",
+				"keyword.struct.go",
+				"keyword.interface.go",
+				"keyword.function.go",
+				"keyword.return.go",
+				"keyword.channel.go",
+				"keyword.map.go"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		// Встроенные типы
+		{
+			"name": "Go - Builtin types",
+			"scope": [
+				"storage.type.numeric.go",
+				"storage.type.string.go",
+				"storage.type.byte.go",
+				"storage.type.rune.go",
+				"storage.type.error.go",
+				"storage.type.boolean.go",
+				"entity.name.type.any.go",
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		// Встроенные функции
+		{
+			"name": "Go - Builtin functions",
+			"scope": [
+				"entity.name.function.support.builtin.go",
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		// Импорты
+		{
+			"name": "Go - Imports",
+			"scope": [
+				"entity.name.import.go"
+			],
+			"settings": {
+				//"foreground": "#AFBF7E"
+			}
+		},
+		// Пакеты
+		{
+			"name": "Go - Packages",
+			"scope": [
+				"entity.name.type.package.go",
+				"variable.other.import.go"
+			],
+			"settings": {
+				"foreground": "#AFBF7E"
+			}
+		},
+		// Типы
+		{
+			"name": "Go - Types",
 			"scope": [
 				"entity.name.type.go",
-				"support.type.go",
-				"storage.type.go",
-				"entity.other.inherited-class.go"
 			],
 			"settings": {
 				"foreground": "#A9B7C6"
 			}
 		},
+		// Указатели
 		{
-			"name": "Go - Pointer Star",
+			"name": "Go - Pointers",
 			"scope": [
 				"keyword.operator.pointer.go",
 				"keyword.operator.address.go",
@@ -941,101 +1121,30 @@
 				"foreground": "#A9B7C6"
 			}
 		},
+		// Функции
 		{
-			"name": "Go - Package Qualified Types",
+			"name": "Go - Functions",
 			"scope": [
-				"entity.name.type.qualified.go",
-				"support.type.qualified.go",
-				"entity.name.type.package.go"
+				"entity.name.function.go",
+				"entity.name.function.support.go"
 			],
 			"settings": {
-				"foreground": "#6A8759"
+				"foreground": "#FFC660"
 			}
 		},
+		// Константы
 		{
-			"name": "Go - Package Name in Qualified Types",
+			"name": "Go - Constants",
 			"scope": [
-				"entity.name.package.qualified.go",
-				"variable.other.module.go",
-				"entity.name.import.go"
+				"variable.other.constant.go",
 			],
 			"settings": {
-				"foreground": "#9aaa62"
+				"foreground": "#9876AA"
 			}
 		},
+		// Переменные
 		{
-			"name": "Go - Built-in Types",
-			"scope": [
-				"support.type.builtin.go",
-				"storage.type.string.go",
-				"storage.type.numeric.go",
-				"storage.type.boolean.go",
-				"storage.type.byte.go",
-				"storage.type.error.go",
-				"storage.type.int.go",
-				"storage.type.bool.go"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "Go - Keywords",
-			"scope": [
-				"keyword.control.go",
-				"keyword.function.go",
-				"keyword.import.go",
-				"keyword.package.go",
-				"keyword.type.go",
-				"keyword.struct.go",
-				"keyword.interface.go",
-				"keyword.const.go",
-				"keyword.var.go"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "Go - nil",
-			"scope": [
-				"constant.language.go",
-				"constant.language.nil.go"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "Go - Function Declaration",
-			"scope": [
-				"entity.name.function.go"
-			],
-			"settings": {
-				"foreground": "#FFC66D"
-			}
-		},
-		{
-			"name": "Go - Function Call",
-			"scope": [
-				"support.function.go",
-				"meta.function-call.go"
-			],
-			"settings": {
-				"foreground": "#A9B7C6"
-			}
-		},
-		{
-			"name": "Go - Built-in Function",
-			"scope": [
-				"support.function.builtin.go"
-			],
-			"settings": {
-				"foreground": "#FFC66D"
-			}
-		},
-		{
-			"name": "Go - Variables and Parameters",
+			"name": "Go - Variables",
 			"scope": [
 				"variable.other.go",
 				"variable.parameter.go",
@@ -1046,114 +1155,90 @@
 			}
 		},
 		{
-			"name": "Go - Method Receiver",
+			"name": "Go - Strings",
 			"scope": [
-				"variable.parameter.receiver.go",
-				"variable.other.receiver.go",
-				"meta.receiver.go variable.parameter.go"
+				"string.quoted.double.go",
+				"string.quoted.raw.go"
 			],
 			"settings": {
-				"foreground": "#5EA4B9"
+				"foreground": "#6A8759"
 			}
 		},
 		{
-			"name": "Go - Field Access",
+			"name": "Go - Escape strings",
 			"scope": [
-				"variable.other.property.go",
-				"variable.other.member.go",
-				"punctuation.accessor.go"
+				"constant.character.escape.go",
 			],
 			"settings": {
-				"foreground": "#9876AA"
+				"foreground": "#CC7832"
 			}
 		},
+		// Плейсхолдеры
 		{
-			"name": "Go - Struct Field Names",
+			"name": "Go - Placeholders",
 			"scope": [
-				"meta.struct.field.go",
-				"variable.field.go"
+				"constant.other.placeholder.go",
 			],
 			"settings": {
-				"foreground": "#9876AA"
+				"foreground": "#CC7832"
 			}
 		},
+		// Числа
 		{
-			"name": "Go - Operators",
+			"name": "Go - Numbers",
 			"scope": [
-				"keyword.operator.go",
-				"keyword.operator.assignment.go",
-				"keyword.operator.comparison.go",
-				"keyword.operator.logical.go",
-				"keyword.operator.arithmetic.go"
+				"constant.numeric.go",
+				"constant.numeric.decimal.go",
 			],
 			"settings": {
-				"foreground": "#A9B7C6"
-			}
-		},
-		{
-			"name": "Go - Type Punctuation",
-			"scope": [
-				"punctuation.other.period.go",
-				"punctuation.separator.namespace.go"
-			],
-			"settings": {
-				"foreground": "#A9B7C6"
-			}
-		},
-		{
-			"name": "Generic Type Parameters",
-			"scope": [
-				"entity.name.type.parameter",
-				"meta.type.parameters",
-				"support.type.parameter",
-				"storage.type.generic"
-			],
-			"settings": {
-				"foreground": "#5C918C"
+				"foreground": "#6897BB"
 			}
 		}
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
-		// Go specific
-		"type.defaultLibrary:go": "#CC7832",
-		"variable.defaultLibrary:go": "#A9B7C6",
-		"function.defaultLibrary:go": "#FFC66D",
-		"parameter:go": "#A9B7C6",
-		"parameter.declaration:go": "#A9B7C6",
-		"variable:go": "#A9B7C6",
-		"variable.parameter:go": "#5EA4B9",
-		"variable.readonly:go": "#9876AA",
-		"variable.readonly.defaultLibrary:go": "#CC7832",
-		//"variable.definition.struct:go": "#8be9fd",
-		"property:go": "#9876AA",
-		"function.declaration:go": "#FFC66D",
-		"method:go": "#A9B7C6",
-		"method.declaration:go": "#FFC66D",
-		"type:go": "#5EA4B9",
+		// Go
+		// Ключевые слова
+		"keyword:go": "#CC7832",
+
+		// Наименования пакетов
+		"namespace:go": "#AFBF7E",
+		
+		// Типы
+		"type:go":"#6FAFBD",
+		// Определение типа 
 		"type.definition:go": "#A9B7C6",
-		"namespace:go": "#9AAA62",
-		"struct:go": "#5EA4B9",
-		"struct.definition:go": "#A9B7C6",
-		"interface:go": "#5EA4B9",
-		"typeParameter:go": "#5EA4B9",
-		"interface.definition:go": "#A9B7C6",
-		"function.definition.signature:go": "#FFC66D",
-		// Generic Type Parameters for all languages
-		"typeParameter": "#5C918C",
-		"typeParameter:typescript": "#5C918C",
-		"typeParameter:typescriptreact": "#5C918C",
-		"typeParameter:javascript": "#5C918C",
-		"typeParameter:javascriptreact": "#5C918C",
-		// Receiver parameter (method receiver like 'h' in func (h Hoge))
-		"selfParameter:go": "#5EA4B9",
-		"parameter.receiver:go": "#5EA4B9",
-		"variable.receiver:go": "#5EA4B9",
-		// Package names (like 'context' in context.Context)
-		"module:go": "#BACC7C",
-		"package:go": "#BACC7C",
-		"method.definition.signature:go": "#FFC66D",
-		"method.signature:go": "#AA9871",
-		"function.signature:go": "#AA9871"
+		// Встроенные типы 
+		"type.defaultLibrary:go": "#CC7832",
+
+		// Дженерики
+		"typeParameter:go": "#6FAFBD",
+		// Определение дженерика
+		"typeParameter.definition:go": "#A9B7C6",
+
+		// Константы
+		"variable.readonly:go": "#9876AA",
+		// Встроенные константы
+		"variable.readonly.defaultLibrary:go": "#CC7832",
+
+		// Методы
+		"method.definition.signature:go":"#FFC660",
+		// Вызов метода
+		"method.signature:go":"#B09D79",
+
+		// Функции
+		"function.definition.signature:go": "#FFC660",
+		// Вызов функции
+		"function.signature:go": "#B09D79",
+		// Встроенные функции
+		"function.defaultLibrary:go": "#FFC660",
+
+		// Числовые значения
+		"number:go": "#6897BB",
+
+		// Строки
+		//"string:go": "#6A8759", // Конфликтует с `Go - Strings`
+		// Форматируемые строки
+		"string.format:go": "#CC7832"
 	}
 }

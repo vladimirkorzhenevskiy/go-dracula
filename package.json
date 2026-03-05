@@ -1,7 +1,7 @@
 {
   "name": "go-dracula",
   "displayName": "Go Dracula",
-  "description": "",
+  "description": "Semantic highlighting for Go like JetBrains Dracula",
   "version": "1.0.0",
   "publisher": "vladimirkorzhenevskiy",
   "repository": {
@@ -11,8 +11,13 @@
   "engines": {
     "vscode": "^1.80.0"
   },
+  "activationEvents": [
+    "onLanguage:go"
+  ],
+  "main": "./out/extension.js",
   "categories": [
-    "Themes"
+    "Themes",
+    "Programming Languages"
   ],
   "contributes": {
     "themes": [
@@ -21,69 +26,16 @@
         "uiTheme": "vs-dark",
         "path": "./themes/go-dracula-color-theme.json"
       }
-    ],
-    "configurationDefaults": {
-      "editor.fontFamily": "JetBrains Mono",
-      "editor.fontSize": 14,
-      "editor.fontWeight": "300",
-      "editor.fontLigatures": true,
-      "editor.lineHeight": 22,
-      "editor.bracketPairColorization.enabled": false,
-      "editor.minimap.enabled": false,
-
-      "workbench.editor.empty.hint": "hidden",
-      "workbench.startupEditor": "none",
-      "workbench.secondarySideBar.defaultVisibility": "hidden",
-
-      "go.useLanguageServer": true,
-
-      "gopls": {
-        "ui.semanticTokens": true,
-        "ui.diagnostic.staticcheck": true,
-        "ui.navigation.importShortcut": "Definition",
-        "analyses": {
-          "printf": true,
-          "ST1000": false,
-          "nilness": true,
-          "shadow": true,
-          "unusedparams": true,
-          "unusedwrite": true,
-          "useany": true,
-          "composites": true,
-          "cycliccheck": true,
-          "lostcancel": true,
-          "asmdecl": true,
-          "assign": true,
-          "atomic": true,
-          "bools": true,
-          "buildssa": true,
-          "buildtag": true,
-          "cgocall": true,
-          "ctrlflow": true,
-          "directive": true,
-          "errorsas": true,
-          "httpresponse": true,
-          "ifaceassert": true,
-          "loopclosure": true,
-          "nilfunc": true,
-          "shift": true,
-          "sigchanyzer": true,
-          "slog": true,
-          "stdmethods": true,
-          "stringintconv": true,
-          "structtag": true,
-          "testinggoroutine": true,
-          "tests": true,
-          "timeformat": true,
-          "unmarshal": true,
-          "unreachable": true,
-          "unsafeptr": true,
-          "unusedfuncs": true,
-          "unusedvars": true,
-          "unusedconst": true,
-          "unusedimport": true
-        }
-      }
-    }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "18.x",
+    "typescript": "^5.0.0"
   }
 }

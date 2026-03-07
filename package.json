@@ -34,8 +34,14 @@
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
+    "@types/emscripten": "^1.41.5",
     "@types/node": "18.x",
+    "@types/vscode": "^1.80.0",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-go": "^0.25.0",
+    "tree-sitter-wasms": "^0.1.13",
+    "web-tree-sitter": "^0.26.6"
   }
 }

@@ -3,25 +3,19 @@
 	"colors": {
 		"editor.background": "#2B2B2B", // Цвет фона
 		"editor.foreground": "#A9B7C6", // Цвет текста
-
 		"editor.selectionBackground": "#214283", // Цвет фона выделения
 		"editor.selectionForeground": "#ffffff", // Цвет текста выделения
-
 		"editor.selectionHighlightBackground": "#45494a90", // Цвет фона для всех вхождений выделения
 		"editor.selectionHighlightBorder": "#595959", // Цвет рамки для всех вхождений выделения
-
 		"editor.lineHighlightBackground": "#323232", // Цвет фона текущей строки
 		"editor.inactiveSelectionBackground": "#3a3d4150", // Цвет выделения текста при смене фокуса
-
 		"editor.wordHighlightBackground": "#34413480",
 		"editor.wordHighlightBorder": "#4c5052",
 		"editor.wordHighlightStrongBackground": "#34413480",
 		"editor.wordHighlightStrongBorder": "#4c5052",
-
 		"activityBar.background": "#3c3f41",
 		"activityBar.border": "#323232",
 		"activityBar.foreground": "#f0f0f0",
-
 		"breadcrumb.background": "#313335",
 		"dropdown.border": "#323232",
 		"dropdown.foreground": "#bbbbbb",
@@ -41,11 +35,9 @@
 		"editorWidget.border": "#323232",
 		"focusBorder": "#FFFFFF00",
 		"gitDecoration.ignoredResourceForeground": "#6d6d6d",
-
 		"input.background": "#45494a",
 		"input.border": "#323232",
 		"input.foreground": "#bbbbbb",
-
 		"list.activeSelectionBackground": "#4b6eaf",
 		"list.dropBackground": "#474b4d",
 		"list.focusBackground": "#4b6eaf",
@@ -92,26 +84,22 @@
 		"notebook.cellHoverBackground": "#313335",
 		"notebook.focusedEditorBorder": "#505050",
 		"editorOverviewRuler.border": "#46464621",
-
 		// Настройка окна предварительного просмотра
 		// 1. Общая рамка и заголовок
 		"peekView.border": "#595959", // Серая рамка как в IDE
 		"peekViewTitle.background": "#3b3e40", // Темный заголовок
 		"peekViewTitleLabel.foreground": "#bbbbbb", // Текст заголовка
 		"peekViewTitleDescription.foreground": "#999999", // Описание (путь к файлу)
-		
 		// 2. Левая часть (Редактор кода в окне)
 		"peekViewEditor.background": "#2b2b2b", // Такой же фон, как у основного редактора
 		"peekViewEditor.matchHighlightBackground": "#3e4143", // Подсветка найденного слова
 		"peekViewEditor.matchHighlightBorder": "#595959",
-
 		// 3. Правая часть (Список файлов)
 		"peekViewResult.background": "#3b3e40", // Фон списка файлов справа
 		"peekViewResult.fileForeground": "#bbbbbb", // Цвет имени файла
 		"peekViewResult.lineForeground": "#999999", // Цвет номера строки
 		"peekViewResult.selectionBackground": "#214283", // Синее выделение выбранного файла
 		"peekViewResult.selectionForeground": "#ffffff", // Белый текст в выделении
-		
 		// 4. Подсветка вхождения (когда нашел то, что искал)
 		"peekViewResult.matchHighlightBackground": "#4d4d4d"
 	},
@@ -861,15 +849,6 @@
 			}
 		},
 		{
-			"name": "YAML - Key",
-			"scope": [
-				"entity.name.tag.yaml"
-			],
-			"settings": {
-				"foreground": "#9876AA"
-			}
-		},
-		{
 			"name": "Regex",
 			"scope": [
 				"string.regexp"
@@ -938,7 +917,6 @@
 			}
 		},
 		// END
-
 		// Общие
 		// Комментарии
 		{
@@ -1029,7 +1007,6 @@
 				"foreground": "#6897BB"
 			}
 		},
-
 		// Go
 		// Ключевые слова
 		{
@@ -1193,49 +1170,41 @@
 			"settings": {
 				"foreground": "#6897BB"
 			}
-		}
+		},
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		// Go
 		// Ключевые слова
 		"keyword:go": "#CC7832",
-
 		// Наименования пакетов
 		"namespace:go": "#AFBF7E",
-		
 		// Типы
-		"type:go":"#6FAFBD",
+		"type:go": "#6FAFBD",
 		// Определение типа 
 		"type.definition:go": "#A9B7C6",
 		// Встроенные типы 
 		"type.defaultLibrary:go": "#CC7832",
-
 		// Дженерики
 		"typeParameter:go": "#6FAFBD",
 		// Определение дженерика
 		"typeParameter.definition:go": "#A9B7C6",
-
 		// Константы
 		"variable.readonly:go": "#9876AA",
 		// Встроенные константы
 		"variable.readonly.defaultLibrary:go": "#CC7832",
-
 		// Методы
-		"method.definition.signature:go":"#FFC660",
+		"method.definition.signature:go": "#FFC660",
 		// Вызов метода
-		"method.signature:go":"#B09D79",
-
+		"method.signature:go": "#B09D79",
 		// Функции
 		"function.definition.signature:go": "#FFC660",
 		// Вызов функции
 		"function.signature:go": "#B09D79",
 		// Встроенные функции
-		"function.defaultLibrary:go": "#FFC660",
-
+		"function.defaultLibrary:go": "#CC7832",
 		// Числовые значения
 		"number:go": "#6897BB",
-
 		// Строки
 		//"string:go": "#6A8759", // Конфликтует с `Go - Strings`
 		// Форматируемые строки

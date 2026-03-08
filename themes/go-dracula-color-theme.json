@@ -1251,6 +1251,78 @@
 				"foreground": "#629755FF"
 			}
 		},
+		// XML
+		{
+			"name": "XML Prolog & Tags & Keyword",
+			"scope": [
+				"declaration.xml-processing.xml",
+				"variable.language.documentroot.xml",
+				"entity.name.tag.xml",
+				"entity.name.tag.localname.xml",
+				"entity.name.tag.namespace.xml",
+				"punctuation.definition.tag.xml",
+				"punctuation.definition.tag.begin.xml",
+				"punctuation.definition.tag.end.xml",
+				"keyword.other.doctype.xml",
+			],
+			"settings": {
+				"foreground": "#E8BF6A"
+			}
+		},
+		{
+			"name": "XML Attributes",
+			"scope": [
+				"entity.other.attribute-name.xml",
+				"entity.other.attribute-name.localname.xml",
+				"entity.other.attribute-name.namespace.xml",
+			],
+			"settings": {
+				"foreground": "#BABABAFF"
+			}
+		},
+		{
+			"name": "XML Attribute Values",
+			"scope": [
+				"string.quoted.double.xml",
+				"string.quoted.single.xml",
+				"punctuation.definition.string.begin.xml",
+				"punctuation.definition.string.end.xml",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "XML Text & CDATA",
+			"scope": [
+				"text.xml",
+				"string.unquoted.cdata.xml",
+				"string.unquoted.cdata.xml punctuation.definition.string.begin.xml",
+				"string.unquoted.cdata.xml punctuation.definition.string.end.xml",
+			],
+			"settings": {
+				"foreground": "#A9B7C6FF"
+			}
+		},
+		{
+			"name": "XML Character",
+			"scope": [
+				"constant.character.entity.xml",
+			],
+			"settings": {
+				"foreground": "#9876AA"
+			}
+		},
+		{
+			"name": "XML Comments",
+			"scope": [
+				"comment.block.xml",
+				"punctuation.definition.comment.xml"
+			],
+			"settings": {
+				"foreground": "#808080FF",
+			}
+		}
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {

@@ -748,107 +748,6 @@
 			}
 		},
 		{
-			"name": "JSON - Property Name",
-			"scope": [
-				"support.type.property-name.json",
-				"meta.structure.dictionary.key.json",
-				"meta.object-literal.key.json",
-				"meta.structure.dictionary.json meta.structure.dictionary.key.json string.quoted.double.json",
-				"meta.structure.dictionary.json support.type.property-name.json"
-			],
-			"settings": {
-				"foreground": "#9876AA"
-			}
-		},
-		{
-			"name": "JSON - String Value",
-			"scope": [
-				"string.quoted.double.json",
-				"meta.structure.dictionary.value.json string",
-				"meta.structure.array.json string"
-			],
-			"settings": {
-				"foreground": "#6A8759"
-			}
-		},
-		{
-			"name": "JSON - String Value Quotes",
-			"scope": [
-				"meta.structure.dictionary.value.json punctuation.definition.string",
-				"meta.structure.array.json punctuation.definition.string"
-			],
-			"settings": {
-				"foreground": "#6A8759"
-			}
-		},
-		{
-			"name": "JSON - Boolean",
-			"scope": [
-				"constant.language.json",
-				"constant.language.boolean.true.json",
-				"constant.language.boolean.false.json"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "JSON - Null",
-			"scope": [
-				"constant.language.null.json"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "JSON - Number",
-			"scope": [
-				"constant.numeric.json",
-				"meta.structure.dictionary.value.json constant.numeric",
-				"meta.structure.array.json constant.numeric"
-			],
-			"settings": {
-				"foreground": "#6897BB"
-			}
-		},
-		{
-			"name": "JSON - Brackets",
-			"scope": [
-				"punctuation.definition.dictionary.begin.json",
-				"punctuation.definition.dictionary.end.json",
-				"punctuation.definition.array.begin.json",
-				"punctuation.definition.array.end.json",
-				"punctuation.separator.dictionary.key-value.json",
-				"meta.structure.dictionary.json punctuation.definition.dictionary",
-				"meta.structure.array.json punctuation.definition.array"
-			],
-			"settings": {
-				"foreground": "#A9B7C6"
-			}
-		},
-		{
-			"name": "JSON - Comma",
-			"scope": [
-				"punctuation.separator.dictionary.pair.json",
-				"punctuation.separator.array.json"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "JSON - Property Name Quotes",
-			"scope": [
-				"punctuation.support.type.property-name.begin.json",
-				"punctuation.support.type.property-name.end.json",
-				"meta.structure.dictionary.key.json punctuation.definition.string"
-			],
-			"settings": {
-				"foreground": "#9876AA"
-			}
-		},
-		{
 			"name": "Regex",
 			"scope": [
 				"string.regexp"
@@ -1322,7 +1221,88 @@
 			"settings": {
 				"foreground": "#808080FF",
 			}
-		}
+		},
+		// JSON
+		{
+			"name": "JSON Property",
+			"scope": [
+				"support.type.property-name.json",
+				"meta.structure.dictionary.json",
+				"punctuation.support.type.property-name.begin.json",
+				"punctuation.support.type.property-name.end.json"
+			],
+			"settings": {
+				"foreground": "#9876AAFF"
+			}
+		},
+		{
+			"name": "JSON String",
+			"scope": [
+				"string.quoted.double.json"
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "JSON Constant",
+			"scope": [
+				"constant.language.json"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "JSON Numeric",
+			"scope": [
+				"constant.numeric.json"
+			],
+			"settings": {
+				"foreground": "#6897BB"
+			}
+		},
+		{
+			"name": "JSON Punctuation",
+			"scope": [
+				"punctuation.separator.dictionary.key-value.json",
+				"punctuation.definition.dictionary.begin.json",
+				"punctuation.definition.dictionary.end.json",
+				"punctuation.definition.array.begin.json",
+				"punctuation.definition.array.end.json",
+			],
+			"settings": {
+				"foreground": "#A9B7C6FF"
+			}
+		},
+		{
+			"name": "JSON Comma",
+			"scope": [
+				"punctuation.separator.dictionary.pair.json",
+				"punctuation.separator.array.json"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "JSON Escape Character",
+			"scope": [
+				"constant.character.escape.json",
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "JSON Invalid Escape Character",
+			"scope": [
+				"invalid.illegal.unrecognized-string-escape.json",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {

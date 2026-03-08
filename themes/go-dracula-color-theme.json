@@ -1171,6 +1171,86 @@
 				"foreground": "#6897BB"
 			}
 		},
+		// YAML
+		{
+			"name": "YAML Keys (Text & Punctuation)",
+			"scope": [
+				"entity.name.tag.yaml",
+				"entity.name.tag.yaml punctuation.definition.string.begin.yaml",
+				"entity.name.tag.yaml punctuation.definition.string.end.yaml"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "YAML Quoted Values (Text & Punctuation)",
+			"scope": [
+				"string.quoted.single.yaml",
+				"string.quoted.single.yaml",
+				"string.quoted.double.yaml",
+				"string.quoted.double.yaml",
+				"punctuation.definition.string.begin.yaml",
+				"punctuation.definition.string.end",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "YAML Variable (Anchor & Alias)",
+			"scope": [
+				"variable.other.anchor.yaml",
+				"variable.other.alias.yaml"
+			],
+			"settings": {
+				"foreground": "#E8BF6AFF"
+			}
+		},
+		{
+			"name": "YAML Unquoted Values (Boolean & Numeric & Text)",
+			"scope": [
+				"constant.language.boolean.yaml",
+				"constant.numeric.float.yaml",
+				"constant.numeric.integer.decimal.yaml",
+				"string.unquoted.plain.out.yaml",
+				"string.unquoted.plain.in.yaml",
+				"string.unquoted.block.yaml",
+				"string.unquoted.yaml"
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
+			"name": "YAML Punctuation & Keyword",
+			"scope": [
+				"punctuation.definition.block.sequence.item.yaml",
+				"punctuation.separator.map.value.yaml",
+				"punctuation.definition.sequence.begin.yaml",
+				"punctuation.definition.sequence.end.yaml",
+				"punctuation.definition.mapping.begin.yaml",
+				"punctuation.definition.mapping.end.yaml",
+				"punctuation.definition.anchor.yaml",
+				"punctuation.definition.alias.yaml",
+				"keyword.control.flow.block-scalar.folded.yaml",
+				"keyword.control.flow.block-scalar.literal.yaml",
+				"storage.modifier.chomping-indicator.yaml",
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
+			"name": "YAML Comment",
+			"scope": [
+				"comment.line.number-sign.yaml",
+				"punctuation.definition.comment.yaml"
+			],
+			"settings": {
+				"foreground": "#629755FF"
+			}
+		},
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {

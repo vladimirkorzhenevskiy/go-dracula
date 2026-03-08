@@ -434,7 +434,7 @@
 				"invalid.illegal"
 			],
 			"settings": {
-				"foreground": "#FF6B68"
+				"foreground": "#A9B7C6FF"
 			}
 		},
 		{
@@ -748,107 +748,6 @@
 			}
 		},
 		{
-			"name": "JSON - Property Name",
-			"scope": [
-				"support.type.property-name.json",
-				"meta.structure.dictionary.key.json",
-				"meta.object-literal.key.json",
-				"meta.structure.dictionary.json meta.structure.dictionary.key.json string.quoted.double.json",
-				"meta.structure.dictionary.json support.type.property-name.json"
-			],
-			"settings": {
-				"foreground": "#9876AA"
-			}
-		},
-		{
-			"name": "JSON - String Value",
-			"scope": [
-				"string.quoted.double.json",
-				"meta.structure.dictionary.value.json string",
-				"meta.structure.array.json string"
-			],
-			"settings": {
-				"foreground": "#6A8759"
-			}
-		},
-		{
-			"name": "JSON - String Value Quotes",
-			"scope": [
-				"meta.structure.dictionary.value.json punctuation.definition.string",
-				"meta.structure.array.json punctuation.definition.string"
-			],
-			"settings": {
-				"foreground": "#6A8759"
-			}
-		},
-		{
-			"name": "JSON - Boolean",
-			"scope": [
-				"constant.language.json",
-				"constant.language.boolean.true.json",
-				"constant.language.boolean.false.json"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "JSON - Null",
-			"scope": [
-				"constant.language.null.json"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "JSON - Number",
-			"scope": [
-				"constant.numeric.json",
-				"meta.structure.dictionary.value.json constant.numeric",
-				"meta.structure.array.json constant.numeric"
-			],
-			"settings": {
-				"foreground": "#6897BB"
-			}
-		},
-		{
-			"name": "JSON - Brackets",
-			"scope": [
-				"punctuation.definition.dictionary.begin.json",
-				"punctuation.definition.dictionary.end.json",
-				"punctuation.definition.array.begin.json",
-				"punctuation.definition.array.end.json",
-				"punctuation.separator.dictionary.key-value.json",
-				"meta.structure.dictionary.json punctuation.definition.dictionary",
-				"meta.structure.array.json punctuation.definition.array"
-			],
-			"settings": {
-				"foreground": "#A9B7C6"
-			}
-		},
-		{
-			"name": "JSON - Comma",
-			"scope": [
-				"punctuation.separator.dictionary.pair.json",
-				"punctuation.separator.array.json"
-			],
-			"settings": {
-				"foreground": "#CC7832"
-			}
-		},
-		{
-			"name": "JSON - Property Name Quotes",
-			"scope": [
-				"punctuation.support.type.property-name.begin.json",
-				"punctuation.support.type.property-name.end.json",
-				"meta.structure.dictionary.key.json punctuation.definition.string"
-			],
-			"settings": {
-				"foreground": "#9876AA"
-			}
-		},
-		{
 			"name": "Regex",
 			"scope": [
 				"string.regexp"
@@ -1008,9 +907,8 @@
 			}
 		},
 		// Go
-		// Ключевые слова
 		{
-			"name": "Go - Keywords",
+			"name": "Go Keyword",
 			"scope": [
 				"keyword.package.go",
 				"keyword.control.go",
@@ -1029,9 +927,8 @@
 				"foreground": "#CC7832"
 			}
 		},
-		// Встроенные типы
 		{
-			"name": "Go - Builtin types",
+			"name": "Go Builtin Type",
 			"scope": [
 				"storage.type.numeric.go",
 				"storage.type.string.go",
@@ -1045,9 +942,8 @@
 				"foreground": "#CC7832"
 			}
 		},
-		// Встроенные функции
 		{
-			"name": "Go - Builtin functions",
+			"name": "Go Builtin Function Name",
 			"scope": [
 				"entity.name.function.support.builtin.go",
 			],
@@ -1055,19 +951,17 @@
 				"foreground": "#CC7832"
 			}
 		},
-		// Импорты
 		{
-			"name": "Go - Imports",
+			"name": "Go Import",
 			"scope": [
 				"entity.name.import.go"
 			],
 			"settings": {
-				//"foreground": "#AFBF7E"
+				"foreground": "#AFBF7E"
 			}
 		},
-		// Пакеты
 		{
-			"name": "Go - Packages",
+			"name": "Go Package",
 			"scope": [
 				"entity.name.type.package.go",
 				"variable.other.import.go"
@@ -1076,9 +970,8 @@
 				"foreground": "#AFBF7E"
 			}
 		},
-		// Типы
 		{
-			"name": "Go - Types",
+			"name": "Go Type",
 			"scope": [
 				"entity.name.type.go",
 			],
@@ -1086,9 +979,8 @@
 				"foreground": "#A9B7C6"
 			}
 		},
-		// Указатели
 		{
-			"name": "Go - Pointers",
+			"name": "Go Pointer",
 			"scope": [
 				"keyword.operator.pointer.go",
 				"keyword.operator.address.go",
@@ -1098,9 +990,8 @@
 				"foreground": "#A9B7C6"
 			}
 		},
-		// Функции
 		{
-			"name": "Go - Functions",
+			"name": "Go Function Name",
 			"scope": [
 				"entity.name.function.go",
 				"entity.name.function.support.go"
@@ -1109,9 +1000,8 @@
 				"foreground": "#FFC660"
 			}
 		},
-		// Константы
 		{
-			"name": "Go - Constants",
+			"name": "Go Constant",
 			"scope": [
 				"variable.other.constant.go",
 			],
@@ -1119,9 +1009,8 @@
 				"foreground": "#9876AA"
 			}
 		},
-		// Переменные
 		{
-			"name": "Go - Variables",
+			"name": "Go Variable",
 			"scope": [
 				"variable.other.go",
 				"variable.parameter.go",
@@ -1132,7 +1021,7 @@
 			}
 		},
 		{
-			"name": "Go - Strings",
+			"name": "Go Quoted String",
 			"scope": [
 				"string.quoted.double.go",
 				"string.quoted.raw.go"
@@ -1142,7 +1031,7 @@
 			}
 		},
 		{
-			"name": "Go - Escape strings",
+			"name": "Go Escape Character",
 			"scope": [
 				"constant.character.escape.go",
 			],
@@ -1150,9 +1039,8 @@
 				"foreground": "#CC7832"
 			}
 		},
-		// Плейсхолдеры
 		{
-			"name": "Go - Placeholders",
+			"name": "Go Placeholder",
 			"scope": [
 				"constant.other.placeholder.go",
 			],
@@ -1160,15 +1048,421 @@
 				"foreground": "#CC7832"
 			}
 		},
-		// Числа
 		{
-			"name": "Go - Numbers",
+			"name": "Go Numeric",
 			"scope": [
 				"constant.numeric.go",
 				"constant.numeric.decimal.go",
 			],
 			"settings": {
 				"foreground": "#6897BB"
+			}
+		},
+		// YAML
+		{
+			"name": "YAML Keys (Text & Punctuation)",
+			"scope": [
+				"entity.name.tag.yaml",
+				"entity.name.tag.yaml punctuation.definition.string.begin.yaml",
+				"entity.name.tag.yaml punctuation.definition.string.end.yaml"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "YAML Quoted Values (Text & Punctuation)",
+			"scope": [
+				"string.quoted.single.yaml",
+				"string.quoted.single.yaml",
+				"string.quoted.double.yaml",
+				"string.quoted.double.yaml",
+				"punctuation.definition.string.begin.yaml",
+				"punctuation.definition.string.end",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "YAML Variable (Anchor & Alias)",
+			"scope": [
+				"variable.other.anchor.yaml",
+				"variable.other.alias.yaml"
+			],
+			"settings": {
+				"foreground": "#E8BF6AFF"
+			}
+		},
+		{
+			"name": "YAML Unquoted Values (Boolean & Numeric & Text)",
+			"scope": [
+				"constant.language.boolean.yaml",
+				"constant.numeric.float.yaml",
+				"constant.numeric.integer.decimal.yaml",
+				"string.unquoted.plain.out.yaml",
+				"string.unquoted.plain.in.yaml",
+				"string.unquoted.block.yaml",
+				"string.unquoted.yaml"
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
+			"name": "YAML Punctuation & Keyword",
+			"scope": [
+				"punctuation.definition.block.sequence.item.yaml",
+				"punctuation.separator.map.value.yaml",
+				"punctuation.definition.sequence.begin.yaml",
+				"punctuation.definition.sequence.end.yaml",
+				"punctuation.definition.mapping.begin.yaml",
+				"punctuation.definition.mapping.end.yaml",
+				"punctuation.definition.anchor.yaml",
+				"punctuation.definition.alias.yaml",
+				"keyword.control.flow.block-scalar.folded.yaml",
+				"keyword.control.flow.block-scalar.literal.yaml",
+				"storage.modifier.chomping-indicator.yaml",
+			],
+			"settings": {
+				"foreground": "#A9B7C6"
+			}
+		},
+		{
+			"name": "YAML Comment",
+			"scope": [
+				"comment.line.number-sign.yaml",
+				"punctuation.definition.comment.yaml"
+			],
+			"settings": {
+				"foreground": "#629755FF"
+			}
+		},
+		// XML
+		{
+			"name": "XML Prolog & Tags & Keyword",
+			"scope": [
+				"declaration.xml-processing.xml",
+				"variable.language.documentroot.xml",
+				"entity.name.tag.xml",
+				"entity.name.tag.localname.xml",
+				"entity.name.tag.namespace.xml",
+				"punctuation.definition.tag.xml",
+				"punctuation.definition.tag.begin.xml",
+				"punctuation.definition.tag.end.xml",
+				"keyword.other.doctype.xml",
+			],
+			"settings": {
+				"foreground": "#E8BF6A"
+			}
+		},
+		{
+			"name": "XML Attributes",
+			"scope": [
+				"entity.other.attribute-name.xml",
+				"entity.other.attribute-name.localname.xml",
+				"entity.other.attribute-name.namespace.xml",
+			],
+			"settings": {
+				"foreground": "#BABABAFF"
+			}
+		},
+		{
+			"name": "XML Attribute Values",
+			"scope": [
+				"string.quoted.double.xml",
+				"string.quoted.single.xml",
+				"punctuation.definition.string.begin.xml",
+				"punctuation.definition.string.end.xml",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "XML Text & CDATA",
+			"scope": [
+				"text.xml",
+				"string.unquoted.cdata.xml",
+				"string.unquoted.cdata.xml punctuation.definition.string.begin.xml",
+				"string.unquoted.cdata.xml punctuation.definition.string.end.xml",
+			],
+			"settings": {
+				"foreground": "#A9B7C6FF"
+			}
+		},
+		{
+			"name": "XML Character",
+			"scope": [
+				"constant.character.entity.xml",
+			],
+			"settings": {
+				"foreground": "#9876AA"
+			}
+		},
+		{
+			"name": "XML Comments",
+			"scope": [
+				"comment.block.xml",
+				"punctuation.definition.comment.xml"
+			],
+			"settings": {
+				"foreground": "#808080FF",
+			}
+		},
+		// JSON
+		{
+			"name": "JSON Property",
+			"scope": [
+				"support.type.property-name.json",
+				"meta.structure.dictionary.json",
+				"punctuation.support.type.property-name.begin.json",
+				"punctuation.support.type.property-name.end.json"
+			],
+			"settings": {
+				"foreground": "#9876AAFF"
+			}
+		},
+		{
+			"name": "JSON String",
+			"scope": [
+				"string.quoted.double.json"
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "JSON Constant",
+			"scope": [
+				"constant.language.json"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "JSON Numeric",
+			"scope": [
+				"constant.numeric.json"
+			],
+			"settings": {
+				"foreground": "#6897BB"
+			}
+		},
+		{
+			"name": "JSON Punctuation",
+			"scope": [
+				"punctuation.separator.dictionary.key-value.json",
+				"punctuation.definition.dictionary.begin.json",
+				"punctuation.definition.dictionary.end.json",
+				"punctuation.definition.array.begin.json",
+				"punctuation.definition.array.end.json",
+			],
+			"settings": {
+				"foreground": "#A9B7C6FF"
+			}
+		},
+		{
+			"name": "JSON Comma",
+			"scope": [
+				"punctuation.separator.dictionary.pair.json",
+				"punctuation.separator.array.json"
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "JSON Escape Character",
+			"scope": [
+				"constant.character.escape.json",
+			],
+			"settings": {
+				"foreground": "#CC7832"
+			}
+		},
+		{
+			"name": "JSON Invalid Escape Character",
+			"scope": [
+				"invalid.illegal.unrecognized-string-escape.json",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		// Markdown
+		{
+			"name": "Markdown Text & Punctuation",
+			"scope": [
+				"text.html.markdown",
+				"punctuation.definition.metadata.markdown",
+			],
+			"settings": {
+				"foreground": "#A9B7C6FF"
+			}
+		},
+		{
+			"name": "Markdown Heading Punctuation",
+			"scope": [
+				"markup.heading.setext.1.markdown",
+				"markup.heading.setext.2.markdown",
+				"markup.heading.setext.3.markdown",
+				"markup.heading.setext.4.markdown",
+				"markup.heading.setext.5.markdown",
+				"markup.heading.setext.6.markdown",
+				"punctuation.definition.heading.markdown"
+			],
+			"settings": {
+				"foreground": "#CC7832FF",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Markdown Heading",
+			"scope": [
+				"markup.heading.markdown entity.name.section.markdown",
+			],
+			"settings": {
+				"foreground": "#9876AAFF"
+			}
+		},
+		{
+			"name": "Markdown Bold & Italic",
+			"scope": [
+				"punctuation.definition.bold.markdown",
+				"punctuation.definition.italic.markdown",
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
+			}
+		},
+		{
+			"name": "Markdown Strikethrough",
+			"scope": [
+				"punctuation.definition.strikethrough.markdown",
+				"markup.strikethrough.markdown"
+			],
+			"settings": {
+				"foreground": "#A9B7C6FF",
+				"fontStyle": "strikethrough"
+			}
+		},
+		{
+			"name": "Markdown Link",
+			"scope": [
+				"markup.underline.link.markdown",
+				"string.other.link.title.markdown",
+				"meta.link.inet.markdown punctuation.definition.link.markdown",
+				"meta.link.inline.markdown punctuation.definition.link.title.begin.markdown",
+				"meta.link.inline.markdown punctuation.definition.link.title.end.markdown",
+				"punctuation.definition.link.title.begin.markdown",
+				"punctuation.definition.link.title.end.markdown",
+				"punctuation.definition.link.description.begin.markdown",
+				"punctuation.definition.link.description.end.markdown"
+			],
+			"settings": {
+				"foreground": "#287BDEFF",
+			}
+		},
+		{
+			"name": "Markdown Inline Underline Link",
+			"scope": [
+				"meta.link.inline.markdown markup.underline.link.markdown",
+				"meta.image.inline.markdown markup.underline.link.image.markdown"
+			],
+			"settings": {
+				"foreground": "#FFC66DFF"
+			}
+		},
+		{
+			"name": "Markdown Reference Link",
+			"scope": [
+				"meta.link.reference.markdown punctuation.definition.constant.begin.markdown",
+				"meta.link.reference.markdown punctuation.definition.constant.end.markdown",
+				"meta.link.reference.def.markdown punctuation.definition.constant.markdown",
+				"meta.link.reference.def.markdown punctuation.definition.constant.markdown",
+				"constant.other.reference.link.markdown",
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
+			}
+		},
+		{
+			"name": "Markdown Link Description",
+			"scope": [
+				"string.other.link.description.title.markdown",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "Markdown Link Description",
+			"scope": [
+				"string.other.link.description.title.markdown",
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "Markdown Code",
+			"scope": [
+				"markup.raw.block.markdown",
+				"markup.inline.raw.string.markdown",
+				"markup.fenced_code.block.markdown punctuation.definition.markdown",
+				"markup.fenced_code.block.markdown"
+			],
+			"settings": {
+				"foreground": "#6A8759"
+			}
+		},
+		{
+			"name": "Markdown Code Punctuation Definition",
+			"scope": [
+				"markup.fenced_code.block.markdown punctuation.definition.markdown",
+				"punctuation.definition.raw.markdown",
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
+			}
+		},
+		{
+			"name": "Markdown Quotes",
+			"scope": [
+				"punctuation.definition.quote.begin.markdown",
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
+			}
+		},
+		{
+			"name": "Markdown Horizontal Rules",
+			"scope": [
+				"meta.separator.markdown",
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
+			}
+		},
+		{
+			"name": "Markdown List",
+			"scope": [
+				"punctuation.definition.list.begin.markdown",
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
+			}
+		},
+		{
+			"name": "Markdown Table",
+			"scope": [
+				"punctuation.definition.table.markdown",
+				"punctuation.separator.table.markdown"
+			],
+			"settings": {
+				"foreground": "#CC7832FF"
 			}
 		},
 	],
